@@ -59,6 +59,11 @@ const gitmoji = (gitmojis) => {
       validate: guard.message
     },
     {
+      name: 'timework',
+      message: 'Enter the time:',
+      validate: guard.timework
+    },
+    {
       name: 'reference',
       message: 'Issue / PR reference:',
       validate: (value) => guard.reference(value, configVault.getIssueFormat())

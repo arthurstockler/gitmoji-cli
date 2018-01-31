@@ -13,6 +13,8 @@ const errors = {
 
 const title = (title) => (!title || title.includes('`')) ? errors.title : true
 
+const timework = (title) => (!title || title.includes('`')) ? errors.title : true
+
 const message = (message) => message.includes('`') ? errors.message : true
 
 /**
@@ -55,5 +57,6 @@ const reference = (reference, mode) => {
 module.exports = {
   title,
   message,
-  reference
+  reference,
+  timework
 }

@@ -107,7 +107,8 @@ class GitmojiCli {
   _hook (answers) {
     const title = `${answers.gitmoji} ${answers.title}`
     const reference = (answers.reference) ? `#${answers.reference}` : ''
-    const body = `${answers.message} ${reference}`
+    const timework = (answers.timework) ? `#time ${answers.timework}` : ''
+    const body = `${answers.message} ${reference} ${timework}`
 
     fs.writeFile(process.argv[3], `${title}\n\n${body}`, (error) => {
       if (error) {
@@ -126,8 +127,9 @@ class GitmojiCli {
     const reference = (answers.reference)
       ? `${prefixReference}${answers.reference}`
       : ''
+    const timework = (answers.timework) ? `#time ${answers.timework}` : ''
     const signed = config.getSignedCommit() ? '-S' : ''
-    const body = `${answers.message} ${reference}`
+    const body = `${answers.message} ${reference} ${timework}`
     const commit = `git commit ${signed} -m "${title}" -m "${body}"`
 
     if (!this._isAGitRepo()) {

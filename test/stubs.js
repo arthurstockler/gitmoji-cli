@@ -12,6 +12,7 @@ const prompts = {
   gitmoji: ':zap:',
   title: 'Improving performance issues.',
   message: 'Refactored code.',
+  timework: '1m',
   reference: '5'
 }
 
@@ -19,6 +20,7 @@ const promptsJira = {
   gitmoji: ':zap:',
   title: 'Improving performance issues.',
   message: 'Refactored code.',
+  timework: '1m',
   reference: 'ABC-123'
 }
 

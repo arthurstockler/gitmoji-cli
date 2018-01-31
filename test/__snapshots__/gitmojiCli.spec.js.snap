@@ -40,9 +40,9 @@ gitmoji --hook $1",
 }
 `;
 
-exports[`gitmoji module commit should match for the commit snapshot with the given prompts 1`] = `"git commit -S -m \\":zap: Improving performance issues.\\" -m \\"Refactored code. #5\\""`;
+exports[`gitmoji module commit should match for the commit snapshot with the given prompts 1`] = `"git commit -S -m \\":zap: Improving performance issues.\\" -m \\"Refactored code. #5 #time 1m\\""`;
 
-exports[`gitmoji module commit should match for the commit snapshot with the given prompts 2`] = `"git commit  -m \\":zap: Improving performance issues.\\" -m \\"Refactored code. ABC-123\\""`;
+exports[`gitmoji module commit should match for the commit snapshot with the given prompts 2`] = `"git commit  -m \\":zap: Improving performance issues.\\" -m \\"Refactored code. ABC-123 #time 1m\\""`;
 
 exports[`gitmoji module should match for gitmoji class 1`] = `
 GitmojiCli {
@@ -122,6 +122,11 @@ Array [
   Object {
     "message": "Enter the commit message:",
     "name": "message",
+    "validate": [Function],
+  },
+  Object {
+    "message": "Enter the time:",
+    "name": "timework",
     "validate": [Function],
   },
   Object {
